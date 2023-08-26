@@ -9,3 +9,9 @@
 .about-container img{
     max-width: 100%;
 }
+
+.about-dark{
+    background-color: black;
+    border-top: solid 1px gray;
+    color:white;
+  }

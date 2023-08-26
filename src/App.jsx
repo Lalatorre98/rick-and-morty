@@ -8,12 +8,16 @@ import Footer from './components/Footer/Footer'
 import Episodes from './pages/Episodes/Episodes'
 import About from './pages/About/About'
 import CharacterDetails from './pages/CharacterDetails/CharacterDetails'
+import ThemeContextProvider from './contexts/ThemeContext'
+
+
 
 function App() {
 //switches to different pages to be able to control what is in betweem(<Routes>)
   return (
     //shows where one is on the url, ex: ("https://url.com/(location)"")
    <BrowserRouter>
+   <ThemeContextProvider>
     <Header />
     
     <Routes>
@@ -26,6 +30,7 @@ function App() {
     </Routes>
 
     <Footer />
+    </ThemeContextProvider>
 
    </BrowserRouter>
     
