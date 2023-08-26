@@ -22,6 +22,9 @@ function Header() {
         <Link to='/about' style={{marginRight:"10px"}}>About</Link>
         <Link to='/episodes' style={{marginRight:"10px"}}>Episodes</Link>
       </div>
+      <div>
+      <Link to='/favorites'>My Favorites</Link>
+      
       <button onClick={()=> setDarkMode(!darkMode)}
       className={darkMode?"theme-button theme-button-dark":"theme-button"}>
         {
@@ -29,6 +32,7 @@ function Header() {
         }
         
       </button>
+      </div>
     </div>
   )
 }

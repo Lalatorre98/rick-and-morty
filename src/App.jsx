@@ -9,6 +9,9 @@ import Episodes from './pages/Episodes/Episodes'
 import About from './pages/About/About'
 import CharacterDetails from './pages/CharacterDetails/CharacterDetails'
 import ThemeContextProvider from './contexts/ThemeContext'
+import MyFavorites from './pages/MyFavorites/MyFavorites'
+import FavoritesContextProvider from './contexts/FavoritesContext'
+
 
 
 
@@ -18,6 +21,7 @@ function App() {
     //shows where one is on the url, ex: ("https://url.com/(location)"")
    <BrowserRouter>
    <ThemeContextProvider>
+    <FavoritesContextProvider>
     <Header />
     
     <Routes>
@@ -26,10 +30,12 @@ function App() {
     <Route path='/about' element={<About />} />
     <Route path='/episodes' element={<Episodes />} />
     <Route path='/details/:characterId' element={<CharacterDetails />} />
+    <Route path='/favorites' element={<MyFavorites />} />
 
     </Routes>
 
     <Footer />
+    </FavoritesContextProvider>
     </ThemeContextProvider>
 
    </BrowserRouter>
